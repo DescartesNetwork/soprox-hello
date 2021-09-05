@@ -1,0 +1,47 @@
+{
+  "currentNetwork": "devnet",
+  "devnet": {
+    "nodeUrl": "https://api.devnet.solana.com",
+    "payer": {
+      "address": "",
+      "secretKey": ""
+    },
+    "program": {
+      "address": "",
+      "secretKey": ""
+    }
+  },
+  "testnet": {
+    "nodeUrl": "https://api.testnet.solana.com",
+    "payer": {
+      "address": "",
+      "secretKey": ""
+    },
+    "program": {
+      "address": "",
+      "secretKey": ""
+    }
+  },
+  "mainnet": {
+    "nodeUrl": "https://api.mainnet-beta.solana.com",
+    "payer": {
+      "address": "",
+      "secretKey": ""
+    },
+    "program": {
+      "address": "",
+      "secretKey": "s"
+    }
+  },
+  "custom": {
+    "nodeUrl": "http://localhost:9090",
+    "payer": {
+      "address": "",
+      "secretKey": ""
+    },
+    "program": {
+      "address": "",
+      "secretKey": ""
+    }
+  }
+}

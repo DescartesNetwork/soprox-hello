@@ -1,0 +1,30 @@
+{
+  "name": "hello",
+  "version": "0.0.1",
+  "description": "Created by Soprox",
+  "main": "index.js",
+  "testnetDefaultChannel": "v1.6.9",
+  "scripts": {
+    "build": "cargo build-bpf --manifest-path=./program/Cargo.toml --bpf-out-dir=dist",
+    "deploy": "solana program deploy -k ./dist/payer-keypair.json ./dist/main.so",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DescartesNetwork/soprox.git"
+  },
+  "author": "Tu Phan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DescartesNetwork/soprox/issues"
+  },
+  "homepage": "https://github.com/DescartesNetwork/soprox#readme",
+  "dependencies": {
+    "@solana/web3.js": "^1.24.1",
+    "soprox-abi": "0.0.13"
+  },
+  "devDependencies": {
+    "@senswap/sen-scripts": "^0.0.16",
+    "husky": "^7.0.0"
+  }
+}
