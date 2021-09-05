@@ -1,6 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-node preCommit.js
-
-exit 1
+node ./.husky/preCommit.js
