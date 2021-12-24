@@ -1,7 +1,5 @@
 use crate::error::AppError;
-// use crate::helper::math::DOUBLE_PRECISION;
 use crate::interfaces::{xsplata::XSPLATA, xsplt::XSPLT, xsystem::XSystem};
-// use num_bigint::BigInt;
 use solana_program::{
   account_info::AccountInfo,
   clock::Clock,
@@ -99,26 +97,6 @@ pub fn is_signer(accounts: &[&AccountInfo]) -> ProgramResult {
   Ok(())
 }
 
-// pub fn is_farm_owner(owner: &AccountInfo, farm_acc: &AccountInfo) -> ProgramResult {
-//   let farm_data = Farm::unpack(&farm_acc.data.borrow())?;
-//   if farm_data.owner != *owner.key {
-//     return Err(AppError::InvalidOwner.into());
-//   }
-//   Ok(())
-// }
-
-// pub fn is_debt_owner(
-//   owner: &AccountInfo,
-//   debt_acc: &AccountInfo,
-//   farm_acc: &AccountInfo,
-// ) -> ProgramResult {
-//   let debt_data = Debt::unpack(&debt_acc.data.borrow())?;
-//   if debt_data.farm != *farm_acc.key || debt_data.owner != *owner.key {
-//     return Err(AppError::InvalidOwner.into());
-//   }
-//   Ok(())
-// }
-
 pub fn safe_seed(
   seed_acc: &AccountInfo,
   expected_acc: &AccountInfo,
@@ -136,9 +114,3 @@ pub fn current_timestamp() -> Result<i64, ProgramError> {
   let clock = Clock::get()?;
   Ok(clock.unix_timestamp)
 }
-
-// pub fn estimate_delay(farm_data: Farm) -> Result<u64, ProgramError> {
-//   let current_timestamp = current_timestamp()?;
-//   let delay = (current_timestamp - farm_data.genesis_timestamp) as u64 / farm_data.period;
-//   Ok(delay)
-// }

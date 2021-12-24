@@ -7,8 +7,8 @@
       "secretKey": ""
     },
     "program": {
-      "address": "H9LqmgubD7gcPxt3pwd1XmALdW8JXamFvAtokxbHgWKC",
-      "secretKey": "4d5292e34810b09cdc034bc7ccedce8dc42e10f52ab223082d560c0b16d0bde9efde1249c18c7b168b246f2651a830b4df3384fdee866a5cc5cb961a608c50cb"
+      "address": "",
+      "secretKey": ""
     }
   },
   "testnet": {

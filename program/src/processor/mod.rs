@@ -13,7 +13,7 @@ impl Processor {
   ) -> ProgramResult {
     let instruction = AppInstruction::unpack(instruction_data)?;
     match instruction {
-      AppInstruction::SayHello { amount: u32 } => {
+      AppInstruction::SayHello { amount } => {
         msg!("Calling SayHello function");
         say_hello::exec(amount, program_id, accounts)?;
         Ok(())
