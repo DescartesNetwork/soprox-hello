@@ -15,6 +15,8 @@ pub use solana_program::program_error::PrintProgramError as PrintAppError;
 pub enum AppError {
   #[error("Invalid instruction")]
   InvalidInstruction,
+  #[error("Invalid owner")]
+  InvalidOwner,
   #[error("Incorrect program id")]
   IncorrectProgramId,
   #[error("Operation overflowed")]
@@ -40,6 +42,7 @@ impl PrintProgramError for AppError {
   {
     match self {
       AppError::InvalidInstruction => msg!("Error: Invalid instruction"),
+      AppError::InvalidOwner => msg!("Error: Invalid owner"),
       AppError::IncorrectProgramId => msg!("Error: Incorrect program id"),
       AppError::Overflow => msg!("Error: Operation overflowed"),
     }
